@@ -16,13 +16,13 @@ import java.util.Random;
  * */
 
 
-class Weather {
+public class Weather {
     private String Weather;
     private static final String[] weatherEffect = {"Sunny", "Rainy", "Drought"};
     private Random random = new Random();
 
     public Weather() {
-        //random.nextInt(3) → 0, 1, 2 중 랜덤한 숫자를 반환
+//        random.nextInt(3) → 0, 1, 2 중 랜덤한 숫자를 반환
         //weatherEffect에서 해당 인덱스의 값을 선택하여 Weather 변수에 저장
         this.Weather = weatherEffect[random.nextInt(weatherEffect.length)];
     }
@@ -61,7 +61,7 @@ class Weather {
             System.out.println("가뭄입니다. 물을 뿌려 주어야 합니다. 당근🥕을 바로 수확할 수 있습니다.");
             crop.grow();
         } else {
-            System.out.println("❌ 틀렸습니다. 가뭄이 지속되어 다른 작물의 성장속도가 1턴 증가합니다.");
+            System.out.println("❌ 틀렸습니다. 가뭄이 지속되어 당근🥕의 성장속도 1턴 증가합니다.");
             crop.increaseGrowthTime();
         }
         break;

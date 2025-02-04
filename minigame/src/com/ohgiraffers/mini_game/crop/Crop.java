@@ -1,12 +1,5 @@
 package com.ohgiraffers.mini_game.crop;
 
-// 작물 기본
-/*
-* 1.농부 이름 정하기(사용자)
-* 2. 턴 길이 설정 - 10턴
-* 3. 초기 자본과 기본 토지 제공 - 5칸
-* */
-
 public abstract class Crop {
     protected String cropName;
     protected int growthTime;
@@ -17,6 +10,22 @@ public abstract class Crop {
         this.cropName = cropName;
         this.growthTime = growthTime;
         this.sellPrice = sellPrice;
+    }
+
+    public String getCropName() {
+        return cropName;
+    }
+
+    public int getGrowthTime() {
+        return growthTime;
+    }
+
+    public int getSellPrice() {
+        return sellPrice;
+    }
+
+    public int getGrowthProgress() {
+        return growthProgress;
     }
 
     public void grow() {
